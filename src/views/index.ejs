@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/navbar')%>
+        <div class="content">
+            <% if(users.length>0){ %> <% users.forEach(user=>{ %>
+                    <h3 class="title">
+                        <%= user.firstName %>
+                            <%= user.lastName %>
+                    </h3>
+                    <p><%= user.email %></p>
+                    <%})%><%} else {%>
+                        <p>Não há usuários para imprimir...</p>
+                    <%}%>
+        </div>
+</body>
+
+</html>
